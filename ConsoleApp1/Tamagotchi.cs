@@ -3,7 +3,7 @@ public class Tamagotchi
 {
     private int hunger =6;
     private int boredom =6;
-    private List<string> words=[];
+    public List<string> words=[];
     public bool isAlive=true;
     public string name="";
     public void Feed()
@@ -33,6 +33,8 @@ public class Tamagotchi
         {
             boredom=0;
         }
+        Console.WriteLine(name+" blev mindre uttråkad.");
+        Console.ReadKey();
     }
     public void stats()
     {
