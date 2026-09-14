@@ -1,15 +1,15 @@
 using System;
 public class Tamagotchi
 {
-    private int hunger;
-    private int boredom;
+    private int hunger =6;
+    private int boredom =6;
     private List<string> words=[];
-    private bool isAlive=true;
+    public bool isAlive=true;
     public string name="";
     public void Feed()
     {
         Console.WriteLine(name +" ate and became less hungry.");
-        hunger -=0;
+        hunger -=2;
         if (hunger < 0)
         {
             hunger=0;
@@ -37,5 +37,21 @@ public class Tamagotchi
     public void stats()
     {
         Console.WriteLine();
+    }
+    public void depression()
+    {
+        if (boredom >=10)
+        {
+            isAlive=false;
+            Console.WriteLine(name+" dog av depression.");
+        }
+    }
+    public void starve()
+    {
+        if (hunger >= 10)
+        {
+            isAlive=false;
+            Console.WriteLine(name+" dog av svält.");
+        }
     }
 }
