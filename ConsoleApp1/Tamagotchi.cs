@@ -1,9 +1,9 @@
 using System;
 public class Tamagotchi
 {
-    private int hunger =6;
-    private int boredom =6;
-    public List<string> words=[];
+    private int hunger =0;
+    private int boredom =0;
+    private List<string> words=[];
     public bool isAlive=true;
     public string name="";
     public void Feed()
@@ -38,7 +38,8 @@ public class Tamagotchi
     }
     public void stats()
     {
-        Console.WriteLine();
+        Console.WriteLine("Hunger:"+ hunger);
+        Console.WriteLine("Utråkad: "+ boredom);
     }
     public void depression()
     {
@@ -55,5 +56,9 @@ public class Tamagotchi
             isAlive=false;
             Console.WriteLine(name+" dog av svält.");
         }
+    }
+    public void hi()
+    {
+         if(words.Count>0){Console.WriteLine(name+": "+words[Random.Shared.Next(words.Count)] );};
     }
 }

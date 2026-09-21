@@ -9,7 +9,8 @@ while (tamagotchi.isAlive == true)
     tamagotchi.tick();
     tamagotchi.starve();
     tamagotchi.depression();
-    if(tamagotchi.words.Count>0){Console.WriteLine(tamagotchi.name+": "+tamagotchi.words[Random.Shared.Next(tamagotchi.words.Count)] );};
+    if (tamagotchi.isAlive == false){break;}
+    tamagotchi.hi();
     Console.WriteLine("Vad vill du göra med "+tamagotchi.name+".");
     Console.WriteLine("1. Mata den.");
     Console.WriteLine("2. Lära den ett nytt ord.");
@@ -44,3 +45,4 @@ while (tamagotchi.isAlive == true)
         Console.ReadKey();
     }
 }
+Console.ReadKey();
